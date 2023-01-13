@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb949d7079.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Badminton Check-IN</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">CUBC</div>
+        <div class="title">Badminton Check-IN</div>
+        <div class="add-file">
+            <input type="file" id="uploadFile" accept=".csv">
+            <button class="add-file-button" id="uploadConfirm"> <span id="plus">+</span> Add file </button>
+        </div>
+       
+        
+    </nav>
+
+    <div class="search-box">
+        
+        <input type="text" placeholder="search . . ." id="search-bar" onkeyup="searchFunction(this)"/>
+    
+    </div>
+    
+    <div id="search-result-container">
+        Search Results:
+        <ul id="search-results">
+
+        </ul>
+    </div>
+
+    <div class="player-section">
+        <div class="top-row">
+            <ul>
+                Sort By:
+                <li id="fullName">Full Name</li>
+                <li id="ranking">Ranking</li>
+            </ul>
+        </div>
+    </div>
+    <div class="player-container" id="p-container">
+        <table class="player-table">
+            <thead>
+                <tr class="table-head">
+                    <th>Full Name</th>
+                    <th>Student ID</th>
+                    <th>Ranking</th>
+                </tr>
+            </thead>
+            <tbody id="player-information">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

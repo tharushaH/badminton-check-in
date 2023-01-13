@@ -1,0 +1,276 @@
+html{
+    height: 200%;
+    background: radial-gradient(#FCDDF2,#FCB5B5);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 200vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAF6F6;
+    box-shadow: -7px -7px 40px black, 2px 2px 12px black;
+}
+
+.title, .logo {
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+.title{
+    font-weight: 600;
+}
+.logo{
+    padding-right: 60px;
+    transition: all 0.7s;
+}
+
+.logo:hover{
+    font-weight: 700;
+    color: rgb(195, 2, 195);
+}
+
+.add-file-button{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+
+.add-file-button:hover, #plus:hover{
+    background-color: rgb(22, 255, 22);
+    color: black;
+}
+
+.add-file-button:active, #plus:active{
+    position: relative;
+    box-shadow: 0px 0px 0px;
+    top: 4px;
+}
+
+
+.search-box{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-box input{
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 200;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.search-box input{
+    width: 600px;
+}
+
+
+
+.search-box button:hover {
+    background: #AAC0AF;
+    color: white;
+}
+
+.search-box button:active{
+    position: relative;
+    top: 4px;
+    box-shadow: 0px 0px 0px;
+}
+
+
+.player-section{
+    align-items: center;
+}
+.top-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0FA3B1;
+    background-color: #F9F7F3;
+    margin: 40px;
+    border-radius: 10px;
+    width: auto;
+}
+
+
+.top-row ul{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 30px;
+    font-weight: 300px;
+}
+
+.top-row li{
+    position: relative;
+    top: -7px;
+    border-radius: 8px;
+    background-color: #0FA3B1;
+    padding: 0.2rem 1.5rem;
+    color: #F9F7F3;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in;
+
+}
+
+.top-row li:hover{
+    background-color: #20d2e2;
+}
+
+.top-row ul li:active{
+    position: relative;
+    top: 4px;
+    box-shadow: 0px 0px 0px;
+}
+
+.player-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.player-table{
+    border-collapse: collapse;
+    box-shadow: 0px 5px 8px grey;
+    background-color: #F9F7F3;
+    text-align: left;
+    overflow: hidden;
+    
+}
+
+.table-head{
+    background-color: #0FA3B1;
+    color: #F9F7F3;
+    box-shadow: 0 5px 10px grey;
+    font-size: 1.2em;
+}
+
+th{
+    padding: 1em 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+tr{
+    border-bottom: 1px solid #dddddd;
+    transition: 0.1s;
+}
+
+tr:hover:not(.table-head){
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #0FA3B1;
+}
+
+td{
+    padding: 1em 2em;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#search-result-container{
+    background-color: #AAC0AF;
+    font-size: 2rem;
+    color: #F9F7F3;
+    margin: auto;
+    width: 75%;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-results{
+    list-style: none;
+    margin: 0;
+}
+
+.curr-search{
+    list-style: none;
+    margin: 0.75rem;
+    border:0.5px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    background-color: #FAF6F6;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    cursor: context-menu;
+
+    opacity: 1;
+    animation: fade 0.5s ease-out;
+    
+    
+}
+
+@keyframes fade {
+    0%,100%{
+        position: relative;
+    }
+    0% {
+        top: -15px;
+        opacity: 0 }
+    100% {
+        top: 0px;
+        opacity: 1}
+}
+
+.check-in-button{
+    background: rgb(32, 177, 32);
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.check-in-button:hover{
+    background:rgb(111, 254, 111);
+}
+
+
+.curr-search:nth-child(even){
+    background-color: rgba(15, 163, 177, 0.1);
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
